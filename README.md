@@ -9,37 +9,37 @@ https://www.mmm.ucar.edu/models/wrf
 
 This script has undergone slight modifications based on the script created by Jamal Khan (https://gist.github.com/jamal919/5498b868d34d5ec3920f306aaae7460a#file-install_wrf41-sh).
 
-_Prerequisites_
+_A. Prerequisites_
 1) Tested in Win10/Win11 system
 2) WSL2 has been installed
 3) Latest verion of Ubuntu (22.04.2 LTS) has been installed
 4) Hard disk capacity must be greater than 50GB
 
-_Basic Package Managment_
-1) Go to your Ubuntu terminal, on the bash type:
-   
-   sudo apt update
+_B. Basic Package Managment_
 
-   sudo apt upgrade
 
-   sudo apt install gcc gfortran g++ libtool automake autoconf make m4 grads default-jre csh unzip
+  
 
-3) For JasPer, DomainWizard:
+
+3) For Jasper, Domain Wizard:
    
    sudo apt install unzip
 
-_Directory Listing_
+_C. Directory Listing_
 
-  export HOME=`cd;pwd`
+     export HOME=`cd;pwd`
   
-  mkdir $HOME/WRF
+     mkdir $HOME/WRF
   
-  cd $HOME/WRF
+     cd $HOME/WRF
   
-  mkdir Downloads
-  
-  mkdir Library
+     mkdir Downloads
+     
+     mkdir Library
 
+_D. Downloading the latest version of each library package_
+
+ 
 
 
 
