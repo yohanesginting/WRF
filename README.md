@@ -14,3 +14,34 @@ _Prerequisites_
 2) WSL2 has been installed
 3) Latest verion of Ubuntu (22.04.2 LTS) has been installed
 4) Hard disk capacity must be greater than 50GB
+
+_Basic Package Managment_
+1) Go to your Ubuntu terminal, on the bash type:
+   
+   sudo apt update
+
+   sudo apt upgrade
+
+   sudo apt install gcc gfortran g++ libtool automake autoconf make m4 grads default-jre csh unzip
+
+3) For JasPer, DomainWizard:
+   
+   sudo apt install unzip
+
+_Directory Listing_
+
+  export HOME=`cd;pwd`
+  
+  mkdir $HOME/WRF
+  
+  cd $HOME/WRF
+  
+  mkdir Downloads
+  
+  mkdir Library
+
+
+
+
+
+
