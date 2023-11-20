@@ -105,6 +105,52 @@ _F. Extract and install each library package_
      
      export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH
 
+     
+####  Install NETCDF C Library
+
+     cd $HOME/WRF/Downloads
+     
+     tar -xvzf netcdf-c-4.9.0.tar.gz
+     
+     cd netcdf-c-4.9.0/
+     
+     export CPPFLAGS=-I$DIR/include 
+     
+     export LDFLAGS=-L$DIR/lib
+     
+     ./configure --prefix=$DIR --disable-dap
+     
+     make check
+     
+     make install
+     
+     export PATH=$DIR/bin:$PATH
+     
+     export NETCDF=$DIR
+
+#### NetCDF fortran library
+
+     cd $HOME/WRF/Downloads
+     
+     tar -xvzf netcdf-fortran-4.6.0.tar.gz
+     
+     cd netcdf-fortran-4.6.0/
+     
+     export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH
+     
+     export CPPFLAGS=-I$DIR/include 
+     
+     export LDFLAGS=-L$DIR/lib
+     
+     export LIBS="-lnetcdf -lhdf5_hl -lhdf5 -lz" 
+     
+     ./configure --prefix=$DIR --disable-shared
+     
+     make check
+     
+     make install
+     
+
  
 
 
