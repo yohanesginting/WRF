@@ -17,13 +17,17 @@ _A. Prerequisites_
 
 _B. Basic Package Managment_
 
+Open your Ubuntu terminal (bash) and run this commands:
 
+     sudo apt update
   
+     sudo apt upgrade
+  
+     sudo apt install gcc gfortran g++ libtool automake autoconf make m4 grads default-jre csh
+  
+For Jasper, Domain Wizard:
 
-
-3) For Jasper, Domain Wizard:
-   
-   sudo apt install unzip
+     sudo apt install unzip
 
 _C. Directory Listing_
 
@@ -38,6 +42,68 @@ _C. Directory Listing_
      mkdir Library
 
 _D. Downloading the latest version of each library package_
+
+     cd Downloads
+
+     wget -c https://www.zlib.net/zlib-1.2.13.tar.gz
+     
+     wget -c https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz
+     
+     wget -c https://downloads.unidata.ucar.edu/netcdf-c/4.9.0/netcdf-c-4.9.0.tar.gz
+     
+     wget -c https://downloads.unidata.ucar.edu/netcdf-fortran/4.6.0/netcdf-fortran-4.6.0.tar.gz
+     
+     wget -c https://www.mpich.org/static/downloads/4.1.2/mpich-4.1.2.tar.gz
+     
+     wget -c https://download.sourceforge.net/libpng/libpng-1.6.37.tar.gz
+     
+     wget -c https://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
+
+_E. Compilers_
+
+     export DIR=$HOME/WRF/Library
+     
+     export CC=gcc
+     
+     export CXX=g++
+     
+     export FC=gfortran
+     
+     export F77=gfortran
+
+_F. Extract and install each library package_
+
+#### zlib
+
+     cd $HOME/WRF/Downloads
+     
+     tar -xvzf zlib-1.2.13.tar.gz
+     
+     cd zlib-1.2.13/
+     
+     ./configure --prefix=$DIR
+     
+     make
+     
+     make install
+
+#### hdf5 library for netcdf4 functionality
+
+     cd $HOME/WRF/Downloads
+     
+     tar -xvzf hdf5-1.10.5.tar.gz
+     
+     cd hdf5-1.10.5
+     
+     ./configure --prefix=$DIR --with-zlib=$DIR --enable-hl --enable-fortran
+     
+     make check
+     
+     make install
+     
+     export HDF5=$DIR
+     
+     export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH
 
  
 
