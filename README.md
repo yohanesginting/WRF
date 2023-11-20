@@ -73,7 +73,7 @@ _E. Compilers_
 
 _F. Extract and install each library package_
 
-#### zlib
+#### ZLIB (Zip Compression Library)
 
      cd $HOME/WRF/Downloads
      
@@ -87,7 +87,7 @@ _F. Extract and install each library package_
      
      make install
 
-#### hdf5 library for netcdf4 functionality
+#### HDF5 (Hierarchical Data Format version 5) Library for NetCDF4 Functionality
 
      cd $HOME/WRF/Downloads
      
@@ -106,7 +106,7 @@ _F. Extract and install each library package_
      export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH
 
      
-####  Install NETCDF C Library
+####  NetCDF (Network Common Data Form) C Library
 
      cd $HOME/WRF/Downloads
      
@@ -128,7 +128,7 @@ _F. Extract and install each library package_
      
      export NETCDF=$DIR
 
-#### NetCDF fortran library
+#### NetCDF (Network Common Data Form) Fortran Library
 
      cd $HOME/WRF/Downloads
      
@@ -150,8 +150,66 @@ _F. Extract and install each library package_
      
      make install
      
+#### MPICH (Message Passing Interface Chameleon)
 
+     cd $HOME/WRF/Downloads
+     
+     tar -xvzf mpich-3.3.1.tar.gz
+     
+     cd mpich-3.3.1/
+     
+     ./configure --prefix=$DIR
+     
+     make
+     
+     make install
+     
+     export PATH=$DIR/bin:$PATH
+
+ #### LIBPNG (Library for Portable Network Graphics)
+
+     cd $HOME/WRF/Downloads
+     
+     export LDFLAGS=-L$DIR/lib
+     
+     export CPPFLAGS=-I$DIR/include
+     
+     tar -xvzf libpng-1.6.37.tar.gz
+     
+     cd libpng-1.6.37/
+     
+     ./configure --prefix=$DIR
+     
+     make
+     
+     make install
+
+     
+ #### JASPER
+
+     cd $HOME/WRF/Downloads
+     
+     unzip jasper-1.900.1.zip
+     
+     cd jasper-1.900.1/
+     
+     autoreconf -i
+     
+     ./configure --prefix=$DIR
+     
+     make
+     
+     make install
+     
+     export JASPERLIB=$DIR/lib
+     
+     export JASPERINC=$DIR/include
  
+
+
+
+
+
 
 
 
