@@ -41,7 +41,7 @@ _C. Directory Listing_
      
      mkdir Library
 
-_D. Downloading the latest version of each library package_
+_D. Downloading the Latest Version of each Library Package_
 
      cd Downloads
 
@@ -71,7 +71,7 @@ _E. Compilers_
      
      export F77=gfortran
 
-_F. Extract and install each library package_
+_F. Extract and Install each Library Package_
 
 #### ZLIB (Zip Compression Library)
 
@@ -204,7 +204,43 @@ _F. Extract and install each library package_
      export JASPERLIB=$DIR/lib
      
      export JASPERINC=$DIR/include
+
+_G. Download and Install WRF v.4.5.1 and WPS v.4.5_
+
+#### WRF v.4.5.1
+
+     cd $HOME/WRF/Downloads
+     
+     wget -c https://github.com/wrf-model/WRF/releases/download/v4.5.1/v4.5.1.tar.gz
+     
+     tar -xvzf v4.5.1.tar.gz -C $HOME/WRF
+     
+     cd $HOME/WRF/WRFV4.5.1
+     
+     ./clean
+     
+     ./configure # 34, 1 for gfortran and distributed memory
+     
+     ./compile em_real
+     
+     export WRF_DIR=$HOME/WRF/WRFV4.5.1
+
+ #### WPS v.4.5
+
+     cd $HOME/WRF/Downloads
+     
+     wget -c https://github.com/wrf-model/WPS/archive/refs/tags/v4.5.tar.gz
+     
+     tar -xvzf v4.5.tar.gz -C $HOME/WRF
+     
+     cd $HOME/WRF/WPS-4.5
+     
+     ./configure #3
+     
+     ./compile
+
  
+
 
 
 
