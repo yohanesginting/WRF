@@ -77,9 +77,9 @@ _F. Extract and Install each Library Package_
 
      cd $HOME/WRF/Downloads
      
-     tar -xvzf zlib-1.2.13.tar.gz
+     tar -xvzf zlib-1.3.tar.gz
      
-     cd zlib-1.2.13/
+     cd zlib-1.3/
      
      ./configure --prefix=$DIR
      
