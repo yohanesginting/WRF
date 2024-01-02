@@ -45,7 +45,7 @@ _D. Downloading the Latest Version of each Library Package_
 
      cd Downloads
 
-     wget -c https://www.zlib.net/zlib-1.2.13.tar.gz
+     wget -c https://www.zlib.net/zlib-1.3.tar.gz
      
      wget -c https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz
      
