@@ -53,7 +53,7 @@ _D. Downloading the Latest Version of each Library Package_
      
      wget -c https://downloads.unidata.ucar.edu/netcdf-fortran/4.6.1/netcdf-fortran-4.6.1.tar.gz
      
-     wget -c https://www.mpich.org/static/downloads/4.1.2/mpich-4.1.2.tar.gz
+     wget -c https://www.mpich.org/static/downloads/4.2.0rc1/mpich-4.2.0rc1.tar.gz
      
      wget -c https://download.sourceforge.net/libpng/libpng-1.6.37.tar.gz
      
