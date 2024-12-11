@@ -45,17 +45,17 @@ _D. Downloading the Latest Version of each Library Package_
 
      cd Downloads
 
-     wget -c https://www.zlib.net/zlib-1.3.tar.gz
+     wget -c https://www.zlib.net/zlib-1.3.1.tar.gz
      
-     wget -c https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.14/hdf5-1.14.3/src/hdf5-1.14.3.tar.gz
+     wget -c https://support.hdfgroup.org/releases/hdf5/v1_14/v1_14_5/downloads/hdf5-1.14.5.tar.gz
      
      wget -c https://downloads.unidata.ucar.edu/netcdf-c/4.9.2/netcdf-c-4.9.2.tar.gz
      
      wget -c https://downloads.unidata.ucar.edu/netcdf-fortran/4.6.1/netcdf-fortran-4.6.1.tar.gz
      
-     wget -c https://www.mpich.org/static/downloads/4.2.0rc1/mpich-4.2.0rc1.tar.gz
+     wget -c https://www.mpich.org/static/downloads/4.2.3/mpich-4.2.3.tar.gz
      
-     wget -c https://download.sourceforge.net/libpng/libpng-1.6.37.tar.gz
+     wget -c https://sourceforge.net/projects/libpng/files/libpng16/1.6.44/libpng-1.6.44.tar.gz/download
      
      wget -c https://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
 
@@ -77,9 +77,9 @@ _F. Extract and Install each Library Package_
 
      cd $HOME/WRF/Downloads
      
-     tar -xvzf zlib-1.3.tar.gz
+     tar -xvzf zlib-1.3.1.tar.gz
      
-     cd zlib-1.3/
+     cd zlib-1.3.1/
      
      ./configure --prefix=$DIR
      
@@ -91,9 +91,9 @@ _F. Extract and Install each Library Package_
 
      cd $HOME/WRF/Downloads
      
-     tar -xvzf hdf5-1.10.5.tar.gz
+     tar -xvzf hdf5-1.14.5.tar.gz
      
-     cd hdf5-1.10.5
+     cd hdf5-1.14.5
      
      ./configure --prefix=$DIR --with-zlib=$DIR --enable-hl --enable-fortran
      
@@ -110,9 +110,9 @@ _F. Extract and Install each Library Package_
 
      cd $HOME/WRF/Downloads
      
-     tar -xvzf netcdf-c-4.9.0.tar.gz
+     tar -xvzf netcdf-c-4.9.2.tar.gz
      
-     cd netcdf-c-4.9.0/
+     cd netcdf-c-4.9.2/
      
      export CPPFLAGS=-I$DIR/include 
      
@@ -132,9 +132,9 @@ _F. Extract and Install each Library Package_
 
      cd $HOME/WRF/Downloads
      
-     tar -xvzf netcdf-fortran-4.6.0.tar.gz
+     tar -xvzf netcdf-fortran-4.6.1.tar.gz
      
-     cd netcdf-fortran-4.6.0/
+     cd netcdf-fortran-4.6.1/
      
      export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH
      
@@ -154,9 +154,9 @@ _F. Extract and Install each Library Package_
 
      cd $HOME/WRF/Downloads
      
-     tar -xvzf mpich-3.3.1.tar.gz
+     tar -xvzf mpich-4.2.3.tar.gz
      
-     cd mpich-3.3.1/
+     cd mpich-4.2.3/
      
      ./configure --prefix=$DIR
      
@@ -174,9 +174,9 @@ _F. Extract and Install each Library Package_
      
      export CPPFLAGS=-I$DIR/include
      
-     tar -xvzf libpng-1.6.37.tar.gz
+     tar -xvzf libpng-1.6.44.tar.gz
      
-     cd libpng-1.6.37/
+     cd libpng-1.6.44/
      
      ./configure --prefix=$DIR
      
@@ -207,15 +207,15 @@ _F. Extract and Install each Library Package_
 
 _G. Download and Install WRF v.4.5.1 and WPS v.4.5_
 
-#### WRF v.4.5.1
+#### WRF v.4.6.1
 
      cd $HOME/WRF/Downloads
      
-     wget -c https://github.com/wrf-model/WRF/releases/download/v4.5.1/v4.5.1.tar.gz
+     wget -c https://github.com/wrf-model/WRF/releases/download/v4.6.1/v4.6.1.tar.gz
      
-     tar -xvzf v4.5.1.tar.gz -C $HOME/WRF
+     tar -xvzf v4.6.1.tar.gz -C $HOME/WRF
      
-     cd $HOME/WRF/WRFV4.5.1
+     cd $HOME/WRF/WRFV4.6.1
      
      ./clean
      
@@ -223,17 +223,17 @@ _G. Download and Install WRF v.4.5.1 and WPS v.4.5_
      
      ./compile em_real
      
-     export WRF_DIR=$HOME/WRF/WRFV4.5.1
+     export WRF_DIR=$HOME/WRF/WRFV4.6.1
 
- #### WPS v.4.5
+ #### WPS v.4.6.0
 
      cd $HOME/WRF/Downloads
      
-     wget -c https://github.com/wrf-model/WPS/archive/refs/tags/v4.5.tar.gz
+     wget -c https://github.com/wrf-model/WPS/archive/refs/tags/v4.6.0.tar.gz
      
-     tar -xvzf v4.5.tar.gz -C $HOME/WRF
+     tar -xvzf v4.6.0.tar.gz -C $HOME/WRF
      
-     cd $HOME/WRF/WPS-4.5
+     cd $HOME/WRF/WPS-4.6.0
      
      ./configure #3
      
